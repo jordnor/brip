@@ -118,6 +118,7 @@ export function tokenize(sourceCode: string): Token[] {
 					src[0].charCodeAt(0),
 					src[0]
 				);
+				// @ts-ignore
 				Deno.exit(1);
 			}
 		}
@@ -126,6 +127,7 @@ export function tokenize(sourceCode: string): Token[] {
 	return tokens;
 }
 
+// @ts-ignore
 const source = await Deno.readTextFile("./test.brip");
 for (const token of tokenize(source)) {
 	console.log(token);
